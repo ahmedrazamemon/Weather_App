@@ -80,11 +80,12 @@ export default function Home() {
     // }
 
     return (
-        <>
-            <div className="container" style={{ textAlign: "center" }}>
-                <h1> <BsFillCloudFill style={{color:"white"}}/> Weather data <BsFillCloudFill style={{color:"white"}}/></h1>
-            <CiLocationOn /> &emsp; <input type="text" name={input} id="sinput" onChange={(e) => setinput(e.target.value)} placeholder="Enter City Name" />
-                <button id="button" onClick={getdata} >check</button>
+      <>
+                <h1  style={{color:"white",textAlign:"center"}}> Weather data </h1>
+      {/* // <div className="main"> */}
+          <div className="container" style={{ textAlign: "center" }}>
+           <input type="text" name={input}  className="search-input" onChange={(e) => setinput(e.target.value)} placeholder="Enter City Name" />
+                <button className="search-button" onClick={getdata} >check</button>
             </div>
             {
                 data == input ? <h1></h1>
@@ -96,7 +97,7 @@ export default function Home() {
 
                             // <div  style={{textAlign:"center"}}>
 
-                            <div class="weather-card" style={{width:"100px"}}>
+                            <div class="weather-card" >
 
                                 <div className="alldata">
                                     <div class="location">Results For <br /> {v.name}</div>
@@ -123,7 +124,8 @@ export default function Home() {
 
 
 
-        </>
+        {/* </div> */}
+</>
     )
 }
 

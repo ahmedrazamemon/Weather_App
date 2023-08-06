@@ -1,108 +1,208 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-*{
+* {
   /* border: 1px solid; */
   margin: 0;
   padding: 0;
 
 }
- 
- body {
-    background-image:url(https://study.com/cimages/videopreview/weather-definition-and-types_113503.jpg);
-    background-position: center;
-    background-size: cover  ;
-    height: 100vh;
+
+body {
+  background-image: url(https://study.com/cimages/videopreview/weather-definition-and-types_113503.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
   background-repeat: no-repeat;
-    font-family: 'Times New Roman', Times, serif;
-    background-color: #f5f5f5;
-    /* display: flex;
+  font-family: 'Times New Roman', Times, serif;
+  background-color: #f5f5f5;
+  /* display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh; */
-    margin: 0;
-  }
-  #sinput{
-      width: 200px;
-      height: 20px;
-      /* padding: 4px; */
-    /* border-radius: 10px; */
-    /* border-color: 0; */
-  }
-  h1{
-    font-size: 45px;
-    /* color:bisque; */
-  }
-  #button{
-    padding: 5px;
-    color: white;
-    width: 50px;
-    font-weight: bold;
-    background-color: #32336b;
-  }
-  .weather-card {
-    /* background-color: #ffffff; */
-    border-radius: 10px;
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
-    padding: 20px;
-    top: 22px;
+  margin: 0;
+}
 
-    /* position: relative; */
-    text-align: center;
-    width: auto  ;
-    /* display: flex; */
-    /* margin: auto; */
-    margin-top: 88px;
-    /* justify-content: space-around; */
-    /* width: 110% !important; */
-    /* width: 100%; */
+#sinput {
+  width: 200px;
+  height: 20px;
+  /* padding: 4px; */
+  /* border-radius: 10px; */
+  /* border-color: 0; */
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  /* Horizontal alignment (center) */
+  align-items: center;
+}
+
+h1 {
+  font-size: 45px;
+  /* color:bisque; */
+}
+
+#button {
+  padding: 5px;
+  color: white;
+  width: 50px;
+  font-weight: bold;
+  background-color: #32336b;
+}
+
+.weather-card {
+  /* background-color: #ffffff; */
+  /* border-radius: 10px; */
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  padding: 20px;
+  top: 22px;
+  text-align: center;
+  /* display: block; */
+  /* width: auto  ; */
+  /* display: flex; */
+  /* margin: auto; */
+  margin-top: 88px;
+  /* justify-content: space-around; */
+  /* width: 110% !important; */
+  /* width: 100%; */
+}
+
+.alldata {
+
+  /* background-color: rgba(255, 255, 0, 0.5); */
+  /* background-color: rgba(0, 0, 255, 0.5); */
+  background-color: rgb(208, 212, 208);
+  /* background-color: rgb(180, 183, 180); */
+
+  width: 1000px;
+  margin-left: 200px;
+  padding: 20px;
+  border-radius: 20px;
+  border: 2px solid black;
+}
+
+
+.temperature {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 1.2rem;
+  color: #070000;
+  margin-bottom: 20px;
+}
+
+.icon {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+}
+
+/* Styles for the search input */
+.search-input {
+
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  outline: none;
+  width: 250px;
+  /* Adjust the width as needed */
+}
+
+/* Styles for the search button */
+.search-button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  /* Blue color - you can change this to your desired color */
+  color: #fff;
+  /* Text color */
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+  /* Add a box-shadow or any other styles to make the button more prominent */
+}
+@media screen and (max-width: 300px) {
+.weather-card{
+  margin-left: -180px;
+  margin-top: 10px;
+  display: flex ;
+  align-items: center;
+  justify-content: center;
+}
+  .temperature{
+ 
+    /* width: 100px !important;
+    font-size: 20px;*/
+    font-size: 28px; 
   }
-  .alldata{
-    background-color: rgb(208, 212, 208);
-    width: 1000px;
-    margin-left: 200px;
-    padding: 20px;
-    border-radius: 20px;
-    border: 2px solid black;
+  .footer,.footer-item{
+    font-size: 20px !important;
   }
-  
-  
-  .temperature {
-    font-size: 3rem;
-    font-weight: bold;
-    margin-bottom: 20px;
+}
+@media screen and (min-width: 300px) {
+  .weather-card{
+    margin-left: -180px;
+    margin-top: 10px;
+    display: flex ;
+    align-items: center;
+    justify-content: center;
   }
-  
-  .description {
-    font-size: 1.2rem;
-    color: #070000;
-    margin-bottom: 20px;
+    .temperature{
+   
+      /* width: 100px !important;
+      font-size: 20px;*/
+      font-size: 33px; 
+    }
+    .footer,.footer-item{
+      font-size: 24px !important;
+    }
   }
-  
-  .icon {
-    width: 100px;
-    height: 100px;
-    margin-bottom: 20px;
-  }
+/* Hover and Active styles for the button */
+.search-button:hover {
+  background-color: #0056b3;
+  /* Darker shade of blue on hover */
+}
+
+.search-button:active {
+  background-color: #004080;
+  /* Even darker shade of blue when button is clicked */
+}
+
 /*   
   .footer {
     display: flex;
     justify-content: space-between;
   } */
-  
-  .footer-item {
-    font-size: 1.2rem;
-    color: #0c0101;
-    padding: 5px;
+
+.footer-item {
+  font-size: 1.2rem;
+  color: #0c0101;
+  padding: 5px;
+}
+/* 
+ @media screen and (min-width: 300px) {
+  .weather-card {
+border: 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-  
-  @media (min-width: 576px) {
-    .weather-card {
-      max-width: 400px;
-    }
-  }
+
+  .alldata {
+    /* display: block; */
+    /* justify-content: center; */
+    /* align-items: center; */
 
   /* @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap' */
 
- /* {
+/* {
   box-sizing: border-box;
   margin: 0;
   padding: 0; */
@@ -160,19 +260,14 @@ h1 {
 ::placeholder {
   color: #f8f8f8;
 }
-
+*/
 .container {
-  max-width: 700px;
-  height: 700px;
-  margin: auto;
-  padding: 0 1rem;
-  position: relative;
-  top: 10%;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
 }
 
+/*
 .app .top {
   width: 100%;
   margin: 1rem auto;
