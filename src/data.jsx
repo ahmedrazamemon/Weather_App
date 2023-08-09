@@ -113,7 +113,7 @@ export default function Home() {
                                     <h2 className="footer">Weather:{v.weather["0"].main}</h2>
                                     <h2 className="footer-item">Wind Speed:{Math.round(v.wind.speed)} <FiWind />km/h</h2>
                                     <h2 className="footer-item">Humidity:{Math.round(v.main.humidity)}<WiHumidity/> </h2>
-                                    <h2 className="footer-item"> feels like{Math.round(v.main.feels_like)}<sup>o</sup>c</h2>
+                                    <h2 className="footer-item"> feels like:{Math.round(v.main.feels_like)}<sup>o</sup>c</h2>
 
                                 </div>
 
